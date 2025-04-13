@@ -67,7 +67,7 @@ void finalVsConst() {
   // finalList2[1] = ""; // this will throw run time error 
 }
 
-/// Using _ which are not used 
+/// Using _ which are not used
 void wildCardExample() {
   const List<String> wildcardList = ["Wildcard", "Example"];
 
