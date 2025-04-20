@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_training/flutter-basics/world_generator_app/name_generator.dart';
+import 'package:flutter_training/flutter-projects/world_generator_app/name_generator.dart';
 
 import 'package:flutter_training/main.dart';
 
