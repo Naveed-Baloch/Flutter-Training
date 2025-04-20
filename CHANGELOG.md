@@ -2,6 +2,15 @@
 
 ## Flutter Core 
 
+### State Management 
+#### Sharing States
+1. Using Constructors & callbacks
+2. Inherited Widgets
+#### Custom State Handling 
+1. Using Stateful widgets
+2. Using ListenableBuilder with Change Notifiers
+3. MVVM pattern using Listenable + ChangeNotifiers + Inherited Widgets  
+
 ### Name Generator App
 1. Provider Basics
      `ChangeNotifier`, `ChangeNotifierProvider`, `context.watch<T>()` 
