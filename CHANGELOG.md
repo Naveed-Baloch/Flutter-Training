@@ -3,6 +3,14 @@
 ## Flutter Core 
 
 ### State Management 
+#### Inputs 
+1. Buttons 
+2. Text 
+3. TextFields
+4. Form 
+5. Segmented Buttons 
+6. Chip
+
 #### Sharing States
 1. Using Constructors & callbacks
 2. Inherited Widgets
