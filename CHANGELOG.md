@@ -1,6 +1,14 @@
 # Flutter Training Change Log 
 
 ## Flutter Core 
+### Networking basics
+1. Json 
+2. Basic Get Api call
+3. Stream 
+4. Result class with data, error and loading
+5. Inherited Widgets 
+6. State management using ChangeNotifier 
+7. 
 
 ### State Management 
 #### Inputs 
