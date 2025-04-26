@@ -7,8 +7,7 @@
 3. Stream 
 4. Result class with data, error and loading
 5. Inherited Widgets 
-6. State management using ChangeNotifier 
-7. 
+6. State management using ChangeNotifier
 
 ### State Management 
 #### Inputs 
