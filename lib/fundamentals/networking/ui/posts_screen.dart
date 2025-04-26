@@ -22,6 +22,12 @@ class PostsScreen extends StatelessWidget {
           },
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          postViewModal.getPosts();
+        },
+        child: const Icon(Icons.refresh),
+      ),
     );
   }
 }

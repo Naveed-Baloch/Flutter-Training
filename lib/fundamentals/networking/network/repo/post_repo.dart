@@ -7,7 +7,14 @@ import 'package:flutter_training/fundamentals/networking/utils/result.dart';
 import 'package:http/http.dart' as http;
 
 class PostRepo {
+  final List<Post> _posts = [];
+
   Stream<Result> getPosts() async* {
+    if (_posts.isNotEmpty) {
+      print("from cache");
+      yield Success(_posts);
+      return;
+    }
     yield Loading();
     try {
       var response = await http.get(
@@ -15,11 +22,14 @@ class PostRepo {
       );
       if (response.statusCode == 200) {
         final json = jsonDecode(response.body);
-        final posts = json
-            .map((e) => PostRsp.fromJson(e).toDomain())
-            .toList()
-            .cast<Post>();
+        final posts =
+            json
+                .map((e) => PostRsp.fromJson(e).toDomain())
+                .toList()
+                .cast<Post>();
+        _posts.addAll(posts);
         yield Success(posts);
+        print("from network");
       } else {
         yield Failure("Failed to load posts");
       }
@@ -27,5 +37,4 @@ class PostRepo {
       yield Failure(e.toString());
     }
   }
-
 }
