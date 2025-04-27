@@ -1,5 +1,5 @@
 void main() {
-  Game game = Game();
+  Game game = Game(name: "Classic");
   game.onGameStart();
   game.onGamePause();
   game.onGameResume();
@@ -9,10 +9,6 @@ void main() {
 }
 
 class Game implements GameListener, ChatListener {
-  @override
-  void onGameEnd() {
-    print('Game End');
-  }
 
   @override
   void onGamePause() {
@@ -38,13 +34,26 @@ class Game implements GameListener, ChatListener {
   void onNotification() {
     print('Game OnNotification');
   }
+
+  @override
+  String name;
+
+  Game({required this.name});
+
+  @override
+  void onGameEnd() {
+
+  }
 }
 
 abstract class GameListener {
+  late String name;
   void onGameStart();
   void onGamePause();
   void onGameResume();
-  void onGameEnd();
+  void onGameEnd() {
+    print('Game End');
+  }
 }
 
 abstract class ChatListener{

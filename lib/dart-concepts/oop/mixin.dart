@@ -10,6 +10,7 @@ void main() {
 }
 
 /// Mixin is reusing the code in multiple classes
+/// With mixin we can reuse the code in multiple classes
 /// Mixin are decleared using mixin along with mixin, with and on
 /// [with] is used to apply the mixin on class
 /// [on] when we need to apply the mixin for specific class
@@ -21,7 +22,9 @@ mixin ChatService {
     print('Message sent with chatId: $chatId');
   }
 
-  void onConnection();
+  void onConnection(){
+    print('Connection established for ChatService');
+  }
 
 }
 
@@ -33,13 +36,13 @@ mixin MeetingService {
   }
 
   void onMeetingJoined();
+
+  void onConnection(){
+    print('Connection established for MeetingService');
+  }
 }
 
-class Conversation with ChatService, MeetingService {
-  @override
-  void onConnection() {
-    print('Connection established');
-  }
+class Conversation with MeetingService, ChatService {
 
   @override
   void onMeetingJoined() {

@@ -5,7 +5,7 @@ void main() {
 
 }
 
-extension on String {
+extension StringExtension on String {
   String get capitalize => this.toUpperCase();
 
 
