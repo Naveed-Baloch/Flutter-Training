@@ -134,7 +134,6 @@ class ParallaxFlowDelegate extends FlowDelegate {
     required this.backgroundImageKey,
   }) : super(repaint: scrollable.position);
 
-
   final ScrollableState scrollable;
   final BuildContext listItemContext;
   final GlobalKey backgroundImageKey;
@@ -181,7 +180,7 @@ class ParallaxFlowDelegate extends FlowDelegate {
     context.paintChild(
       0,
       transform:
-      Transform.translate(offset: Offset(0.0, childRect.top)).transform,
+          Transform.translate(offset: Offset(0.0, childRect.top)).transform,
     );
   }
 
@@ -191,12 +190,11 @@ class ParallaxFlowDelegate extends FlowDelegate {
         listItemContext != oldDelegate.listItemContext ||
         backgroundImageKey != oldDelegate.backgroundImageKey;
   }
-
 }
 
 class Parallax extends SingleChildRenderObjectWidget {
   const Parallax({super.key, required Widget background})
-      : super(child: background);
+    : super(child: background);
 
   @override
   RenderObject createRenderObject(BuildContext context) {
@@ -205,9 +203,9 @@ class Parallax extends SingleChildRenderObjectWidget {
 
   @override
   void updateRenderObject(
-      BuildContext context,
-      covariant RenderParallax renderObject,
-      ) {
+    BuildContext context,
+    covariant RenderParallax renderObject,
+  ) {
     renderObject.scrollable = Scrollable.of(context);
   }
 }
@@ -217,7 +215,7 @@ class ParallaxParentData extends ContainerBoxParentData<RenderBox> {}
 class RenderParallax extends RenderBox
     with RenderObjectWithChildMixin<RenderBox>, RenderProxyBoxMixin {
   RenderParallax({required ScrollableState scrollable})
-      : _scrollable = scrollable;
+    : _scrollable = scrollable;
 
   ScrollableState _scrollable;
 

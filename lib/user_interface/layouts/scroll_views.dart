@@ -136,16 +136,17 @@ class CustomScrollViewExample extends StatelessWidget {
               crossAxisSpacing: 10.0,
               childAspectRatio: 4.0,
             ),
-            delegate: SliverChildBuilderDelegate((BuildContext context, int index) {
-                return Container(
-                  alignment: Alignment.center,
-                  color: Colors.teal[100 * (index % 9)],
-                  child: Text('grid item $index'),
-                );
-              },
-              childCount: 20,
-            ),
-          )
+            delegate: SliverChildBuilderDelegate((
+              BuildContext context,
+              int index,
+            ) {
+              return Container(
+                alignment: Alignment.center,
+                color: Colors.teal[100 * (index % 9)],
+                child: Text('grid item $index'),
+              );
+            }, childCount: 20),
+          ),
         ],
       ),
     );

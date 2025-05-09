@@ -27,7 +27,8 @@ class ReorderableTextFieldList extends StatefulWidget {
   const ReorderableTextFieldList({super.key});
 
   @override
-  _ReorderableTextFieldListState createState() => _ReorderableTextFieldListState();
+  _ReorderableTextFieldListState createState() =>
+      _ReorderableTextFieldListState();
 }
 
 class _ReorderableTextFieldListState extends State<ReorderableTextFieldList> {
@@ -45,7 +46,7 @@ class _ReorderableTextFieldListState extends State<ReorderableTextFieldList> {
       },
       children: [
         for (int i = 0; i < items.length; i++)
-          Text(items[i], key: ValueKey(items[i]),)
+          Text(items[i], key: ValueKey(items[i])),
       ],
     );
   }
@@ -53,6 +54,7 @@ class _ReorderableTextFieldListState extends State<ReorderableTextFieldList> {
 
 class FormKeyExample extends StatelessWidget {
   FormKeyExample({super.key});
+
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -72,7 +74,7 @@ class FormKeyExample extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               final currentState = _formKey.currentState;
-              if (currentState !=null && currentState.validate()) {
+              if (currentState != null && currentState.validate()) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Processing Data')),
                 );
