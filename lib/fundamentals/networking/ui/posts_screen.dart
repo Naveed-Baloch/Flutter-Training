@@ -8,13 +8,29 @@ class PostsScreen extends StatelessWidget {
   final ThemeManager themeManager;
   final PostViewModal postViewModal = PostViewModal();
 
-  PostsScreen({super.key,  required this.themeManager});
+  PostsScreen({super.key, required this.themeManager});
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Posts'),
+        title: Theme(
+          data: theme.copyWith(
+            // colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+            textTheme: TextTheme(bodyMedium: TextStyle(color: Colors.red),
+          )),
+          child: Builder(
+            builder:
+                (context) => Text(
+                  'Posts',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+          ),
+        ),
+        toolbarTextStyle: theme.appBarTheme.titleTextStyle?.copyWith(
+          fontStyle: FontStyle.italic,
+        ),
         actions: [
           PopupMenuButton<ThemeMode>(
             icon: Icon(_getThemeModeIcon()),

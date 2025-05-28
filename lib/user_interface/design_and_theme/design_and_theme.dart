@@ -99,6 +99,7 @@ class AppTheme {
         fontSize: 57,
         fontWeight: FontWeight.w400,
         letterSpacing: -0.25,
+        fontStyle: FontStyle.italic,
       ),
       displayMedium: GoogleFonts.roboto(
         fontSize: 45,
