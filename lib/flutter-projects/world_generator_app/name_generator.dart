@@ -16,6 +16,7 @@ class NameGenerator extends StatelessWidget {
         title: 'Namer App',
         theme: ThemeData(
           useMaterial3: true,
+          fontFamily: 'Montserrat',
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
         ),
         home: MyHomePage(),
