@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
@@ -31,7 +30,7 @@ class Assets extends StatelessWidget {
           },
           child: const Text('Load Json File'),
         ),
-        Image.asset('assets/images/elephant.jpg'),
+        Image.asset('assets/images/ic_elephant.webp'),
       ],
     );
   }
