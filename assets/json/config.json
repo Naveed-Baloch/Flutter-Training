@@ -1,0 +1,15 @@
+{
+  "user_name": "Naveed",
+  "user_role": "admin",
+  "feature_flags": {
+    "enable_new_dashboard": true,
+    "enable_beta_analytics": false,
+    "show_experimental_ui": true
+  },
+  "device_profile": {
+    "name": "Pixel 5 Emulator",
+    "os_version": "12.0",
+    "screen_resolution": "1080x2340"
+  },
+  "locale": "en_US"
+}
