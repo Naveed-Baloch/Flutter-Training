@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training/user_interface/navigation/go_router/routes.dart';
 import 'package:flutter_training/user_interface/navigation/go_router/screens/screen3.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_training/user_interface/navigation/go_router/typed_routes.dart';
 
 /// Step1:  Define Router
 /// Step2:  Use the Router
@@ -17,7 +16,7 @@ import 'package:go_router/go_router.dart';
 /// Step7: Redirection in Go-Router
 ///         1. If the User is not logged in then redirect to Login Screen
 void main() {
-  runApp(MaterialApp.router(routerConfig: RouteConfigs.router));
+  runApp(MaterialApp.router(routerConfig: typedRouter));
 }
 
 class MainScreen extends StatelessWidget {
@@ -33,36 +32,30 @@ class MainScreen extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                // Navigate to the second screen using the GoRouter
-                context.push(RouteConfigs.screen1.path);
+                // Navigate using type-safe approach
+                const Screen1Route().go(context);
               },
               child: const Text('Go to First Screen'),
             ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Navigate to the third screen using the GoRouter
-                context.push(RouteConfigs.screen2.path);
+                // Navigate using type-safe approach
+                const Screen2Route().go(context);
               },
               child: const Text('Go to Second Screen'),
             ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () async {
-                // Navigate to the third screen using the GoRouter
-                final screen3data = Screen3Data(
-                  name: "Go router",
+                // Navigate using type-safe approach with string parameters
+                final result = await Screen3Route(name: "Go router",
                   description: 'Data received',
-                );
-                final result = await context.push(
-                  RouteConfigs.screen3.path,
-                  extra: screen3data,
-                );
+                ).push<Screen3Data>(context);
 
-                final data = result as Screen3Data?;
-                if (data != null) {
-                  print(data.name);
-                  print(data.description);
+                if (result != null) {
+                  print(result.name);
+                  print(result.description);
                 }
               },
               child: const Text('Go to Third Screen'),
