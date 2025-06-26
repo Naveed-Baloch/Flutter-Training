@@ -1,0 +1,28 @@
+
+1. App Store Connect Overview
+    1. Home Page
+        1.
+    2.Creating an App Record
+        1. Setting the developer name
+
+        2.
+    3. App Age Rating
+
+------------Provisional Profiles -----------------
+   1. Install the app on the devices
+   2. There are different Type of Profile
+        1. -> Development
+        2. -> Distribution
+            1. Ad hoc -> Limited Users
+
+------------ Certificates ------------------------
+   1. Sign the Code using KeyChain
+   2. No one else cannot change the code
+   3. Code is trusted
+
+------------ Devices -----------------------------
+   1. Register a device
+
+------------- Test Flight ------------------------
+   1. We upload the build to test the app  
+
