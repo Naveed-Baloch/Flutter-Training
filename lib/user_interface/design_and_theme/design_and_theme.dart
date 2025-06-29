@@ -288,8 +288,8 @@ class AppTheme {
   }
 
   // Card Theme
-  static CardTheme _cardTheme({bool isLight = true}) {
-    return CardTheme(
+  static CardThemeData _cardTheme({bool isLight = true}) {
+    return CardThemeData(
       elevation: 2,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
@@ -300,8 +300,8 @@ class AppTheme {
   }
 
   // Dialog Theme
-  static DialogTheme _dialogTheme({bool isLight = true}) {
-    return DialogTheme(
+  static DialogThemeData _dialogTheme({bool isLight = true}) {
+    return DialogThemeData(
       elevation: 24,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
