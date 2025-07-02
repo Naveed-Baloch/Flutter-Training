@@ -1,0 +1,16 @@
+- How to create packages
+    - exporting the particular file
+    - installing that using pubspec.yaml file
+
+- How to provide the repository using the Repository provider
+    -  MultiRepositoryProvider(
+             providers: [
+               RepositoryProvider(
+                 create: (_) => AuthenticationRepository(),
+                 dispose: (repository) => repository.dispose(),
+               ),
+               RepositoryProvider(create: (_) => UserRepository()),
+             ],
+        child: child)
+    - We can read that the same .read ext like
+       context.read<AuthenticationRepository>()
