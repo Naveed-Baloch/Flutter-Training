@@ -49,6 +49,7 @@ dependencies:
     path: packages/user_repository
   authentication_repository:
     path: packages/authentication_repository
+  web_socket_channel: ^3.0.3
 
 dev_dependencies:
   flutter_test:
