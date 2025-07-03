@@ -1,0 +1,9 @@
+Common Architecture Concepts
+    1. Separation of concerns
+         1. Separating UI Logic from Business logic
+         2. Also Called the Layered Structure as well
+    2. Single Source of Truth (SSOT)
+         1. State should be changed from its class only
+    3. Uni-Direction Data Flow (UDF)
+    4. UI is Function of State
+         1. State is reflected in UI
